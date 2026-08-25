@@ -1,0 +1,57 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "cybermetric",
+    "slug": "cybermetric",
+    "title": "CyberMetric: A Benchmark Dataset based on Retrieval-Augmented Generation for Evaluating LLMs in Cybersecurity Knowledge",
+    "group": "Cybersecurity",
+    "tags": [],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/cybermetric",
+    "inspect_ai": "0.3.260",
+    "eval_version": "2-A",
+    "dependency": ""
+  },
+  "execution": {
+    "class": "plain",
+    "cost_class": "medium",
+    "sandbox": null,
+    "requires_internet": false,
+    "fast": true,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "cybermetric_80",
+      "samples": 80
+    },
+    {
+      "name": "cybermetric_500",
+      "samples": 500
+    },
+    {
+      "name": "cybermetric_2000",
+      "samples": 2000
+    },
+    {
+      "name": "cybermetric_10000",
+      "samples": 10000
+    }
+  ],
+  "total_samples": 12580,
+  "external_assets": [
+    {
+      "type": "direct_url",
+      "source": "https://raw.githubusercontent.com/cybermetric/CyberMetric/{SHA}/",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
